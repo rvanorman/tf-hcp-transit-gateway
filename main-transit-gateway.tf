@@ -60,8 +60,3 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "primary_vpc_gateway_attach" {
   transit_gateway_id = aws_ec2_transit_gateway.primary.id
   vpc_id             = aws_vpc.primary_vpc.id
 }
-
-#resource "aws_ec2_transit_gateway_vpc_attachment_accepter" "primary_vpc" {
-#  provider = aws.primary_vpc
-#  transit_gateway_attachment_id = aws_ec2_transit_gateway_vpc_attachment.primary_vpc_gateway_attach.id
-#}

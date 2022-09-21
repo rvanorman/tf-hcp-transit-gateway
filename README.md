@@ -18,8 +18,9 @@ The intent of this demo is to guide you through a way to set up communication be
 3) The terraform template is set up in a fashion that expects the user to have their AWS CLI config set up in their environment so that the credentials are available to Terraform. More information on that here: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 
 4) Run the following to verify that everything looks good from the root of your recently downloaded repo directory:
-- terraform plan --var-file=var.tfvars
-
+```
+terraform plan --var-file=var.tfvars
+```
 5) If the above does not return any errors and shows all of what it expects to deploy, then run the following and type ‘yes’ when prompted followed by the enter key:
 - terraform apply --var-file=var.tfvars
 

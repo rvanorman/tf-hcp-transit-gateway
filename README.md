@@ -1,6 +1,8 @@
 # tf-hcp-transit-gateway
 The intent of this demo is to guide you through a way to set up communication between your EC2 instances inside of a Private subnet inside of a VPC in AWS and a Vault cluster inside of the same region in an HVN in HCP. The method used is via a Transit Gateway in the region selected and configuring the necessary routes to do so. A few EC2 instances are created in this demo to simulate a means to SSH into the private instances without a public IP and then configuring the needed pieces inside of vault from one and then retrieving the secret from another. The second private instance will utilize the vault agent to invoke a role created in vault to retrieve a secret created in vault as well. Keep in mind that not all regions are currently supported by HCP (i.e. us-east-2).
 
+You can watch a video of deploying this Live with me and a colleage at HashiCorp in 2022 on Youtube: https://www.youtube.com/watch?v=FYCfaVPlY_M
+
 ## Prep:
 
 1) Identify an ssh key in the desired region you will be deploying this to so that you can ssh into the instances created. If you do not have one already, create one via the AWS UI and store it in your preferred directory for SSH.
